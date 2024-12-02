@@ -10,6 +10,9 @@ pt-BR:
       movie:
         one: Filme
         other: Filmes
+      screening:
+        one: Sessão
+        other: Sessões
     attributes:
       movie_theater:
         name: Nome
@@ -24,13 +27,18 @@ pt-BR:
         plot: Enredo
       screening:
         weekday: Dia da Semana
+        start_time: Horário
+        movie_id: Filme
+        movie: Filme
+        room_id: Sala
+        room: Sala
     enums:
       weekday:
         sunday: Domingo
         monday: Segunda-feira
         tuesday: Terça-feira
         wednesday: Quarta-feira
-        thurday: Quinta-feira
+        thursday: Quinta-feira
         friday: Sexta-feira
         saturday: Sábado
 

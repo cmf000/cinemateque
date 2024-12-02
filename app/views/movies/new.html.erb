@@ -1,3 +1,10 @@
+<% if @screening.errors.any? %>
+    <% @screening.errors.full_messages.each |msg| %>
+    <div class="p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:text-gray-600 dark:bg-slate-300" role="alert">
+        <%= msg %>
+    </div>
+  <% end %>
+<% end %>
 <%= page_title(t('.title')) %>
 <%= form_with(model: @movie) do |f| %>
   <div class="mb-6">

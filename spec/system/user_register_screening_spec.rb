@@ -15,10 +15,14 @@ describe 'User registers movie screening' do
     click_on 'Adicionar Sessão'
     select 'Star Wars IV', from: 'Filme'
     select 'Domingo', from: 'Dia da Semana'
-    select 'Cine Paradiso - Sala 1', from: 'Sala'
+    select 'Cine Paradiso - Sala 01', from: 'Sala'
+    fill_in 'Horário', with: '18:00'
     click_on 'Criar Sessão'
 
-
+    expect(page).to have_content("Sessão criada com sucesso")
+    screening = Screening.last
+    expect(screening.room).to eq room
+    expect(screening.movie).to eq movie
   end
 end
 

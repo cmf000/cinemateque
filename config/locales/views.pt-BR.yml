@@ -21,3 +21,12 @@ pt-BR:
     create:
       success: 'Filme adicionado com sucesso.'
       failure: 'Filme não foi adicionado.'
+  screenings:
+    index:
+      title: 'Sessões'
+    new:
+      choose_film: 'Escolha um filme'
+      choose_room: 'Escolha uma sala'
+    create:
+      success: 'Sessão criada com sucesso'
+      failure: 'Sessão não foi criada'

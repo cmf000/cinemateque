@@ -6,7 +6,7 @@ describe 'User views screenings' do
     movie_theater = FactoryBot.create(:movie_theater, name: 'Cine Paradiso', city: 'Brasília')
     movie = FactoryBot.create(:movie, title: 'Star Wars IV', year: 1977, plot: 'Star Wars IV plot', director: 'George Lucas')
     room = FactoryBot.create(:room, movie_theater: movie_theater)
-    screening = FactoryBot.create(:screening, room: room, weekday: 0, movie: movie, start_time: Time.zone.local(1000, 1, 1, 18, 0, 0))
+    screening = FactoryBot.create(:screening, room: room, weekday: :tuesday, movie: movie, start_time: Time.zone.local(1000, 1, 1, 18, 0, 0))
     login_as(user)
 
     visit root_path

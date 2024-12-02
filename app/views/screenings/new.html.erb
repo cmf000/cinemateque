@@ -1,0 +1,20 @@
+<%= page_title(t('.title')) %>
+<%= form_with(model: @screening) do |f| %>
+  <div class="mb-6">
+    <%= f.label :movie_id, class: 'form-label' %>
+    <%= f.collection_select :movie_id, Movie.all, :id, :title, {prompt: t('.choose_film')}, { class: 'form-field' }%>
+  </div>
+  <div class="mb-6">
+    <%= f.label :room_id, class: 'form-label' %>
+    <%= f.collection_select :room_id, Room.all, :id, ->(room){"#{room.movie_theater.name} - #{room.name }"}, {prompt: t('.choose_room')}, class: 'form-field' %>
+  </div>
+  <div class="mb-6">
+    <%= f.label :weekday, class: 'form-label' %>
+    <%= f.collection_select :weekday, Screening.weekdays.keys, :to_s, ->(weekday){I18n.t("activerecord.enums.weekday.#{weekday}")}, {class: 'form-field'} %>
+  </div>
+  <div class="mb-6">
+    <%= f.label :start_time, class: 'form-label' %>
+    <%= f.time_field :start_time, include_seconds: false, class: 'form-field' %>
+  </div>
+  <%= f.submit class: 'btn-confirm' %>
+<% end %>
