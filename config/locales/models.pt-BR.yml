@@ -22,4 +22,15 @@ pt-BR:
         year: Ano
         director: Direção
         plot: Enredo
+      screening:
+        weekday: Dia da Semana
+    enums:
+      weekday:
+        sunday: Domingo
+        monday: Segunda-feira
+        tuesday: Terça-feira
+        wednesday: Quarta-feira
+        thurday: Quinta-feira
+        friday: Sexta-feira
+        saturday: Sábado
 

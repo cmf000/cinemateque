@@ -12,13 +12,13 @@ describe 'User registers movie screening' do
     within('nav') do
       click_on 'Sessões'
     end
-    click_on 'Criar Sessão'
+    click_on 'Adicionar Sessão'
     select 'Star Wars IV', from: 'Filme'
     select 'Domingo', from: 'Dia da Semana'
     select 'Cine Paradiso - Sala 1', from: 'Sala'
     click_on 'Criar Sessão'
 
-    
+
   end
 end
 

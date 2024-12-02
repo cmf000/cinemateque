@@ -12,5 +12,7 @@ Rails.application.routes.draw do
     resources :rooms, only: [:new, :create]
   end
 
+  resources :screenings, only: [:new, :create, :index]
+
   resources :movies, only: [:index, :new, :create]
 end
